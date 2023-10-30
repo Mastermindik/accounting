@@ -1,6 +1,6 @@
 import { ITransaction } from "@/app/models/ITransaction"
 import TransactionDashboard from "../../dashboard/transactionDashboard/TransactionDashboard"
-import styles from "./Lasttransaction.module.scss"
+import styles from "./LastTransaction.module.scss"
 import Link from "next/link"
 
 type LastTransactionProps = {
