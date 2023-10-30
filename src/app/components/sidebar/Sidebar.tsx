@@ -43,8 +43,8 @@ export default function Sidebar() {
   return (
     <div className={`${styles.sidebar} ${styles.active}`}>
       <div className={styles.icon}>
-        <IconButton size="large" /* sx={{ color: "white" }}  */onClick={toggleMenu}>
-          <MenuIcon fontSize="large" /* sx={{ color: "white" }} */ />
+        <IconButton size="large" onClick={toggleMenu}>
+          <MenuIcon fontSize="large" />
         </IconButton>
       </div>
       <Link href={"/dashboard"} className={`${styles.link_item} ${page === "dashboard" ? styles.active : ""}`} >

@@ -6,10 +6,11 @@ import { usePathname } from 'next/navigation'
 import { useGetUserQuery } from '@/app/store/api/user.endpoint'
 import Image from 'next/image'
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { defaultUser } from '@/app/models/IUser'
 
 export default function Header() {
   const currentPage = usePathname().substring(1);
-  const { currentData = {email: "", pictureUrl: "", roles: "", username: "", budget: {expenses: 0,incomes:0,increaseExpenses:0,increaseIncomes:0,total:0}} } = useGetUserQuery();
+  const { currentData = defaultUser } = useGetUserQuery();
   
   return (
     <header className={styles.header}>

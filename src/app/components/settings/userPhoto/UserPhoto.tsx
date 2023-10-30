@@ -16,8 +16,8 @@ export default function UserPhoto({ url }: UserPhotoProps) {
   const [img, setImg] = useState<File>();
   const [update, updateResult] = useUpdateUserPhotoMutation();
 
-  useEffect(() => {
-  }, [updateResult])
+  // useEffect(() => {
+  // }, [updateResult])
   
 
   const handleSelect = () => {

@@ -4,7 +4,7 @@ import Sidebar from '../components/sidebar/Sidebar'
 import Header from '../components/header/Header'
 import MyThemeProvider from '../providers/MyThemeProvider'
 import AosProvider from '../providers/AosProvider'
-import ModalEditTransaction from '../components/transactions/modalEditTransaction/ModalEditTransaction'
+import ModalProvider from '../providers/ModalProvider'
 
 export default function MainLayout({
   children,
@@ -21,7 +21,7 @@ export default function MainLayout({
             <Header />
             {children}
           </div>
-          <ModalEditTransaction />
+          <ModalProvider />
         </div>
       </AosProvider>
     </MyThemeProvider>

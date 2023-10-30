@@ -19,7 +19,7 @@ export default function Settings() {
     password: <ChangePassword setChanging={setChanging} />,
     none: ""
   }
-//фетчити на сервері щоб не було видно емайлу?
+  
   return (
     <div className={styles.settings}>
       <div className={styles.wrapper}>
@@ -29,4 +29,5 @@ export default function Settings() {
       </div>
     </div>
   )
+  
 }

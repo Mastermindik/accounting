@@ -22,10 +22,9 @@ const schema = yup.object({
 
 export default function ModalEditTransaction() {
   const [date, setDate] = useState<Moment | null>(moment());
-  const { id, show, description, sum, transactionDate } = useAppSelector(state => state.modal);
+  const { id, description, sum, transactionDate } = useAppSelector(state => state.modal);
   const { closeModal } = UseActions();
   const [edit, editResult] = useEditTransactionMutation();
-  // console.log(sum);
   
 
   const { control, handleSubmit, formState: { errors } } = useForm<Inputs>({
@@ -53,13 +52,7 @@ export default function ModalEditTransaction() {
       closeModal();
     }
   }, [editResult])
-
-  if (!show) {
-    return (
-      <></>
-    )
-  }
-
+  
   return (
     <div className={styles.wrapper}>
       <form

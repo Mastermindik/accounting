@@ -31,8 +31,8 @@ export default function TransaactionList({ category, type, search }: Transaactio
   
   useEffect(() => {
     setCurrentData(state => [...state, ...transactions])
-
   }, [page])
+  
   useEffect(() => {
     if (deleteTransactionResult.isSuccess) {
       setNeedUpdate(true);

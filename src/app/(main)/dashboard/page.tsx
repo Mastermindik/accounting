@@ -13,31 +13,28 @@ import { defaultUser } from "@/app/models/IUser"
 import { defaultStatistic } from "@/app/models/IStatistic"
 
 export default function Dashboard() {
-  const { currentData: user = defaultUser} = useGetUserQuery();
+  const { currentData: user = defaultUser } = useGetUserQuery();
   const { currentData: transactions = [] } = useGetAllTransactionsQuery(0);
-  const { currentData: monthStatistic = defaultStatistic} = useGetCurrentMonthStatisticQuery();
+  const { currentData: monthStatistic = defaultStatistic } = useGetCurrentMonthStatisticQuery();
   const { currentData: halfYearStatistic = [] } = useGetCurrentYearStatisticQuery();
 
   return (
     <main className={styles.dashboard}>
-      {true ?
-        <>
-          <TotalBalance
-            total={user.budget.total}
-            transaction={transactions[0]}
-          />
-          <Report transactions={halfYearStatistic} />
-          <TotalIncome
-            percent={user.budget.increaseIncomes}
-            total={user.budget.incomes}
-          />
-          <TotalExpence
-            percent={user.budget.increaseExpenses}
-            total={user.budget.expenses}
-          />
-          <Latest lastTransactions={transactions.slice(0, 5)} />
-          <ThisMonth statistic={monthStatistic?.expenses} />
-        </> : ""}
+      <TotalBalance
+        total={user.budget.total}
+        transaction={transactions[0]}
+      />
+      <Report transactions={halfYearStatistic} />
+      <TotalIncome
+        percent={user.budget.increaseIncomes}
+        total={user.budget.incomes}
+      />
+      <TotalExpence
+        percent={user.budget.increaseExpenses}
+        total={user.budget.expenses}
+      />
+      <Latest lastTransactions={transactions.slice(0, 5)} />
+      <ThisMonth statistic={monthStatistic?.expenses} />
     </main>
   )
 }

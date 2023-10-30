@@ -13,34 +13,29 @@ import { defaultUser } from '@/app/models/IUser'
 export default function Transactions() {
   const { currentData: categories = defaultCategories } = useGetAllCategoriesQuery();
   const { currentData: transactions = [] } = useGetAllTransactionsQuery(0);
-  const { currentData: user= defaultUser } = useGetUserQuery();
+  const { currentData: user = defaultUser } = useGetUserQuery();
   const [type, setType] = useState<"income" | "expense" | "all">("all");
   const [category, setCategory] = useState<string>("");
   const [search, setSearch] = useState<string>("");
 
   return (
     <main className={styles.transactions}>
-      {categories && transactions && user ?
-        <>
-          <Filters
-            categories={categories}
-            type={type}
-            setType={setType}
-            category={category}
-            search={search}
-            setCategory={setCategory}
-            setSearch={setSearch} />
-          <div className={styles.chart} data-aos="fade-left">
-            <BudgetChart budget={user.budget} />
-          </div>
-          <TransaactionList
-            transactions={transactions}
-            category={category}
-            type={type}
-            search={search} />
-        </>
-        : ""}
-
+      <Filters
+        categories={categories}
+        type={type}
+        setType={setType}
+        category={category}
+        search={search}
+        setCategory={setCategory}
+        setSearch={setSearch} />
+      <div className={styles.chart} data-aos="fade-left">
+        <BudgetChart budget={user.budget} />
+      </div>
+      <TransaactionList
+        transactions={transactions}
+        category={category}
+        type={type}
+        search={search} />
     </main>
   )
 }
