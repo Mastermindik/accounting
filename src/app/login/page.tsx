@@ -1,8 +1,8 @@
 "use client"
 import styles from "./styles.module.scss"
 import { useState } from "react"
-import RegistrationForm from "./registrationForm"
-import LoginForm from "./loginForm"
+import RegistrationForm from "../components/loginForms/registrationForm"
+import LoginForm from "../components/loginForms/loginForm"
 
 export default function Login() {
   const [flip, setFlip] = useState<boolean>(false);

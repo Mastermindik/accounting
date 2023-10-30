@@ -6,8 +6,8 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup'
 import { redirect } from 'next/navigation'
-import { UseActions } from '../hooks/UseActions'
-import { useRegisterUserMutation } from '../store/api/user.endpoint'
+import { UseActions } from '../../hooks/UseActions'
+import { useRegisterUserMutation } from '../../store/api/user.endpoint'
 
 type RegisterFormProps = {
   flip: boolean,
@@ -43,10 +43,6 @@ export default function RegistrationForm({ flip, setFlip }: RegisterFormProps) {
   useEffect(() => {
     if (registerResult.isSuccess) {
       redirect("/dashboard");
-    }
-    
-    if (registerResult.isError && "status" in registerResult.error) {
-      updateError(registerResult.error.data.message);
     }
   }, [registerResult])
   

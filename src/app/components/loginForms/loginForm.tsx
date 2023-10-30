@@ -5,8 +5,8 @@ import { TextField, FormControl, InputLabel, FilledInput, InputAdornment, IconBu
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { useLoginUserMutation } from '../store/api/user.endpoint';
-import { UseActions } from '../hooks/UseActions';
+import { useLoginUserMutation } from '../../store/api/user.endpoint';
+import { UseActions } from '../../hooks/UseActions';
 import { redirect } from 'next/navigation';
 
 type LoginFormProps = {
@@ -36,9 +36,6 @@ export default function LoginForm({ flip, setFlip }: LoginFormProps) {
   }
 
   useEffect(() => {
-    if (loginresult.isError && "status" in loginresult.error) {
-      updateError(loginresult.error.data.message);
-    }
     if (loginresult.isSuccess) {
       redirect("/dashboard");
     }
