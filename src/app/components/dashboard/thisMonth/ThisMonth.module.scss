@@ -1,0 +1,22 @@
+.this_month {
+    padding: 1.5rem;
+    flex: 0 0 calc(50% - 1rem);
+    // display: flex;
+
+    background: var(--primary-bg);
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    .name {
+        font-size: 1.25rem;
+        font-weight: 900;
+        color: var(--primary-color);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .this_month {
+        flex: 0 0 100%;
+    }
+}

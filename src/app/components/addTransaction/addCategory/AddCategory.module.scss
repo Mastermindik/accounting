@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.add_form {
+    padding: 1.5rem;
+    background: var(--primary-bg);
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+    .btn {
+        background: var(--dark-green);
+        font-weight: 700;
+        border-radius: 1rem;
+    }
+}

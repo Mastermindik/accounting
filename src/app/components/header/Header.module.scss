@@ -1,0 +1,33 @@
+.header {
+    padding: .5rem 2rem;
+    // background: #0F1D2D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--dark-bg);
+    color: var(--primary-color);
+
+    .current_page {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+
+    .user {
+        // margin-left: auto;
+        display: flex;
+        gap: 0.5rem;
+
+        .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            gap: .3rem;
+        }
+    }
+}

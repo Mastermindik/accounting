@@ -1,0 +1,36 @@
+.custom_categories {
+    padding: 1rem;
+    background: var(--primary-bg);
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+
+    .name {
+        font-size: 1.125rem;
+        font-weight: 900;
+    }
+
+    .list {
+        height: 15rem;
+        overflow-y: auto;
+
+        .list_item {
+
+            &.income {
+                color: var(--primary-green);
+            }
+
+            &.expense {
+                color: var(--primary-red);
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: .5rem;
+          }
+    }
+}

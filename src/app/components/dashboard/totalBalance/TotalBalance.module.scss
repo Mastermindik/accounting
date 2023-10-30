@@ -1,0 +1,121 @@
+.total_balance {
+    padding: 3rem 1.3rem 3rem 2.25rem;
+    flex: 0 0 calc(50% - 1rem);
+
+    display: flex;
+    justify-content: space-between;
+    background: var(--primary-bg);
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--primary-color);
+
+        .name {
+            font-size: 1.5625rem;
+            font-weight: 900;
+        }
+
+        .last {
+            .sum {
+                font-size: 1.4375rem;
+                font-weight: 800;
+                
+                &.income {
+                    color: var(--primary-green);
+                }
+        
+                &.expence {
+                    color: var(--primary-red);
+                }
+            }
+
+            .descr {
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: .3rem;
+        }
+    }
+
+    .right {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1;
+        
+        .sum {
+            font-size: 2.8125rem;
+            font-weight: 800;
+            color: var(--primary-bg);
+
+            span {
+                font-size: 1.6rem;
+                opacity: .7;
+            }
+        }
+        
+        .wallet {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--tertiary-bg);
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: -1.6rem;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background: var(--primary-color);
+            z-index: -1;
+            animation: whop .7s;
+        }
+    }
+
+}
+
+@keyframes whop {
+    from {
+        width: 0rem;
+        height: 0rem;
+        
+    }
+    to {
+        width: 20rem;
+        height: 20rem;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .total_balance {
+        padding: 1.3rem;
+        
+        .left {
+            .buttons {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .total_balance {
+        padding: 2rem;
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,67 @@
+$main-bg-light: #A1A0BD;
+$primary-bg-light: #fff;
+$secondary-bg-light: #717085;
+$tertiary-bg-light: rgba(26, 32, 46, 0.7);
+$dark-bg-light: #c6c6c6;
+
+$primary-color-light: #1A202E;
+$secondary-color-light: #A1A0BD;
+
+$primary-green-light: #4FD18B;
+$secondary-green-light: #DCF5E8;
+$dark-green-light: #369361;
+
+$primary-red-light: #D14F4F;
+$secondary-red-light: #F5DCDC;
+
+
+$main-bg-dark: rgba(53, 53, 53);
+$primary-bg-dark: #1A202E;
+$secondary-bg-dark: #121620;
+
+$tertiary-bg-dark: rgba(26, 32, 46, 0.7);
+$dark-bg-dark: #111520;
+
+$primary-color-dark: #fff;
+$secondary-color-dark: #A1A0BD;
+
+$primary-green-dark: #4FD18B;
+$secondary-green-dark: #DCF5E8;
+$dark-green-dark: #369361;
+
+$primary-red-dark: #D14F4F;
+$secondary-red-dark: #F5DCDC;
+
+$main-bg: var(--main-bg);
+$primary-bg: var(--primary-bg);
+$secondary-bg: var(--secondary-bg);
+$tertiary-bg: var(--tertiary-bg);
+$dark-bg: var(--dark-bg);
+
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+
+$primary-green: var(--primary-green);
+$secondary-green: var(--secondary-green);
+$dark-green: var(--dark-green);
+
+$primary-red: var(--primary-red);
+$secondary-red: var(--secondary-red);
+
+body.light-theme {
+    $main-bg: rgba(53, 53, 53);
+    $primary-bg: $primary-bg-dark;
+    $secondary-bg: #121620;
+    $tertiary-bg: rgba(26, 32, 46, 0.7);
+    $dark-bg: #111520;
+
+    $primary-color: $primary-color-dark;
+    $secondary-color: $secondary-color-dark;
+
+    $primary-green: #4FD18B;
+    $secondary-green: #DCF5E8;
+    $dark-green: #369361;
+
+    $primary-red: #D14F4F;
+    $secondary-red: #F5DCDC;
+}

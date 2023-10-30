@@ -1,0 +1,17 @@
+.report {
+    // padding: 3rem 2.25rem;
+    // flex: 0 0 34rem;
+    flex: 0 0 calc(50% - 1rem);
+
+    background: var(--primary-bg);
+    color: var(--primary-color);
+
+    border-radius: 1.25rem;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .report {
+        flex: 0 0 100%;
+    }
+}

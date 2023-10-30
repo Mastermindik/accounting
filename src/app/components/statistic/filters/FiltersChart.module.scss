@@ -1,0 +1,13 @@
+.filters_chart {
+    flex: 0 0 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .filters_chart {
+        flex-basis: auto;
+    }
+}

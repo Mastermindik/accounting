@@ -1,0 +1,69 @@
+.transaction {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    color: var(--primary-color);
+
+    .type_arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+
+        &.income {
+            background: var(--secondary-green);
+
+            .arrow {
+                color: var(--primary-green);
+            }
+        }
+
+        &.expence {
+            background: var(--secondary-red);
+
+            .arrow {
+                color: var(--primary-red);
+            }
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+            width: 10rem;
+            overflow: hidden;
+            font-weight: 800;
+
+            text-overflow: ellipsis;
+        }
+
+        .category {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+    }
+
+    .sum {
+        margin-left: auto;
+        // align-self: flex-end;
+        font-size: 1.125rem;
+        font-weight: 800;
+
+        &.income {
+            color: var(--primary-green);
+        }
+
+        &.expence {
+            color: var(--primary-red);
+        }
+    }
+}

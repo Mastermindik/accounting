@@ -1,0 +1,52 @@
+.sidebar {
+    flex: 0 0 3.4rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    overflow: hidden;
+    transition: all .5s;
+    
+    .icon {
+        height: 3.6rem;
+        display: flex;
+        margin-left: auto;
+        color: var(--primary-color);
+    }
+
+    .link_item {
+        max-height: 2.5rem;
+        padding: .5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all .5s;
+        z-index: 5;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--secondary-bg);
+        }
+
+        &.active {
+            background: var(--secondary-bg);
+        }
+    }
+
+    &.active {
+        flex: 0 0 15rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+
+        &.active {
+            flex: 0 0 3.4rem;
+        }
+
+        .icon {
+            visibility: hidden;
+        }
+    }
+}

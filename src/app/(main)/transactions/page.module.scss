@@ -1,0 +1,45 @@
+.transactions {
+    padding: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 1rem;
+
+    color: var(--primary-color);
+
+    .chart {
+        flex: 0 0 50%;
+
+        color: var(--primary-color);
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1150px) {
+    .transactions {
+        .chart {
+            flex: 0 0 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .transactions {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .transactions {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .transactions {
+        padding: .5rem;
+    }
+}

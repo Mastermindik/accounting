@@ -1,0 +1,37 @@
+.statistic {
+    padding: 1.5rem;
+
+    .wrapper {
+        padding: 1.3rem;
+
+        display: flex;
+        gap: 1rem;
+
+        background: var(--primary-bg);
+        border-radius: 1.25rem;
+
+        .charts {
+            flex: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .statistic {
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .statistic {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .statistic {
+        padding: .5rem;
+    }
+}

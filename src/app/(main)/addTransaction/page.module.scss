@@ -1,0 +1,37 @@
+.add_transaction {
+    padding: 1.7rem 1.7rem 1rem;
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    .options {
+        flex: 0 0 calc(50% - 1rem);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .add_transaction {
+        padding: 1.3rem;
+
+        flex-direction: column;
+
+        .options {
+            flex-basis: auto;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .add_transaction {
+        padding: .8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .add_transaction {
+        padding: .4rem;
+    }
+}

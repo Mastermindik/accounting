@@ -1,0 +1,27 @@
+.add_form {
+    padding: 2.5rem;
+    flex: 0 0 calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+
+    background: var(--primary-bg);
+    border-radius: 1.5rem;
+
+    .date {
+        margin-bottom: 1.4rem;
+    }
+
+    .btn {
+        margin-top: 1rem;
+        background-color: var(--dark-green);
+        font-weight: 700;
+        border-radius: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .add_form {
+        padding: 1.5rem;
+        flex-basis: auto;
+    }
+}

@@ -1,0 +1,13 @@
+.user_info {
+    padding-left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    border-left: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    .theme {
+        margin-bottom: 2rem;
+    }
+}

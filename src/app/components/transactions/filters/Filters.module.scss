@@ -1,0 +1,12 @@
+.filters {
+    flex: auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+@media (max-width: 450px) {
+    .filters {
+        flex-direction: column;
+    }
+}

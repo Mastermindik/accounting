@@ -1,0 +1,32 @@
+.dashboard {
+    padding: 2rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .dashboard {
+        // justify-content: inherit;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .dashboard {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .dashboard {
+        padding: .5rem;
+    }
+}
