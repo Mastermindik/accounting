@@ -19,20 +19,25 @@ export default function TransaactionList({ category, type, search }: Transaactio
   const [currentData, setCurrentData] = useState<ITransaction[]>([]);
   const { data: transactions = [], } = useGetAllTransactionsQuery(page);
   const [deleteTransaction, deleteTransactionResult] = useDeleteTransactionMutation();
+  let firstFetch = true;
 
   useEffect(() => {
     if (needUpdate) {
       setCurrentData(state => state.filter(e => e.id !== deleteTransactionResult.originalArgs));
       setNeedUpdate(false);
-    } else if (transactions.length && page === 0) {
+    } else if (transactions.length && page === 0 && firstFetch) {
       setCurrentData(transactions)
+      firstFetch = false
     }
   }, [transactions])
   
   useEffect(() => {
-    setCurrentData(state => [...state, ...transactions])
+    if (page !== 0 && !firstFetch) {
+      // const newData = transactions.filter(el => currentData.some(e => e.id === el.id));
+      setCurrentData(state => [...state, ...transactions])
+    }     
   }, [page])
-  
+      
   useEffect(() => {
     if (deleteTransactionResult.isSuccess) {
       setNeedUpdate(true);
