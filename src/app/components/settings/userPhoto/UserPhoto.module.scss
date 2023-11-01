@@ -32,3 +32,10 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .user_photo {
+        width: fit-content;
+        align-self: center;
+    }
+}

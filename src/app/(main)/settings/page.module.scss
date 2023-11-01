@@ -16,6 +16,14 @@
     }
 }
 
+@media (max-width: 900px) {
+    .settings {
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .settings {
         padding: 1.5rem;
