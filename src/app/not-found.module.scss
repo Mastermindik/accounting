@@ -1,12 +1,10 @@
-@import "./variables";
-
 .error {
     height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $primary-bg;
-    color: $primary-color;
+    background: var(--primary-bg);
+    color: var(--primary-color);
     font-family: 'Montserrat', sans-serif;
 
     .wrapper {
