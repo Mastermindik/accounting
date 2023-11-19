@@ -10,11 +10,11 @@ Password:
 ```bash
 testusertestuser
 ```
-#Stack
-Next.js
-SASS
-Redux
-RTK Query
-Material UI
-React Hook Form + yup
-Echarts
+# Stack
+- Next.js
+- SASS
+- Redux
+- RTK Query
+- Material UI
+- React Hook Form + yup
+- Echarts
